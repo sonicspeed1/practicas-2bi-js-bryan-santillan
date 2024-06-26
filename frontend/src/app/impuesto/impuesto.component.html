@@ -1,0 +1,45 @@
+<form (ngSubmit)="calcularImpuesto()">
+    <div class="form-group">
+        <h1>Gastos Personales</h1>
+        
+        <label for="cedula" class="form-label">Cédula:</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" [(ngModel)]="cedula" pattern="\d{10}" maxlength="10" required>
+        <div *ngIf="cedula && cedula.length !== 10" class="text-danger">
+            La cédula debe tener exactamente 10 dígitos.
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="sueldo" class="form-label">Sueldo Anual:</label>
+        <input type="number" class="form-control" id="sueldo" name="sueldo" [(ngModel)]="sueldo">
+    </div>
+    
+    <div class="form-group">
+        <label for="vivienda" class="form-label">Vivienda:</label>
+        <input type="number" class="form-control" id="vivienda" name="vivienda" [(ngModel)]="vivienda">
+    </div>
+    
+    <div class="form-group">
+        <label for="educacion" class="form-label">Educación:</label>
+        <input type="number" class="form-control" id="educacion" name="educacion" [(ngModel)]="educacion">
+    </div>
+    
+    <div class="form-group">
+        <label for="salud" class="form-label">Salud:</label>
+        <input type="number" class="form-control" id="salud" name="salud" [(ngModel)]="salud">
+    </div>
+    
+    <div class="form-group">
+        <label for="vestimenta" class="form-label">Vestimenta:</label>
+        <input type="number" class="form-control" id="vestimenta" name="vestimenta" [(ngModel)]="vestimenta">
+    </div>
+    
+    <div class="form-group">
+        <label for="alimentacion" class="form-label">Alimentación:</label>
+        <input type="number" class="form-control" id="alimentacion" name="alimentacion" [(ngModel)]="alimentacion">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Calcular</button>
+
+    <p class="text-primary mt-3">{{ mensaje }}</p>
+</form>

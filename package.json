@@ -1,0 +1,13 @@
+{
+  "name": "mi-practica",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "start:frontend": "cd frontend && ng serve",
+    "start:backend": "cd backend && node server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}

@@ -1,0 +1,66 @@
+<div class="container">
+    <h1>Reportes de Facturas</h1>
+    <table class="table">
+        <thead >
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Tipo Gasto</th>
+                <th scope="col">RUC</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Empresa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let gasto of gastos">
+                <th scope="row">{{gasto.id}}</th>
+                <td>{{gasto.gasto}}</td>
+                <td>{{gasto.ruc}}</td>
+                <td>{{gasto.valor}}</td>
+                <td>{{gasto.empresa}}</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <h1>Reportes al Impuesto a la renta</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Ingresos</th>
+                <th scope="col">Vivienda</th>
+                <th scope="col">Educacion</th>
+                <th scope="col">Salud</th>
+                <th scope="col">Vestimenta</th>
+                <th scope="col">Alimentacion</th>
+                <th scope="col">Gastos</th>
+                <th scope="col">Base imponible</th>
+                <th scope="col">Excedente</th>
+                <th scope="col">fraccionbasica</th>
+                <th scope="col">Porcentaje</th>
+                <th scope="col">Impuesto fraccion basica</th>
+                <th scope="col">Impuesto renta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let impuesto of impuestos">
+                <th scope="row">{{impuesto.id}}</th>
+                <td>{{impuesto.cedula}}</td>
+                <td>{{impuesto.ingreso}}</td>
+                <td>{{impuesto.vivienda}}</td>
+                <td>{{impuesto.educacion}}</td>
+                <td>{{impuesto.salud}}</td>
+                <td>{{impuesto.vestimenta}}</td>
+                <td>{{impuesto.alimentacion}}</td>
+                <td>{{impuesto.gastos}}</td>
+                <td>{{impuesto.baseimponible}}</td>
+                <td>{{impuesto. excedente}}</td>
+                <td>{{impuesto.fraccionbasica}}</td>
+                <td>{{impuesto.Porcentaje_Excedente}}</td>
+                <td>{{impuesto.impuesto_fraccion_basica}}</td>
+                <td>{{impuesto.impuesto_renta}}</td>
+                </tr>
+        </tbody>
+    </table>
+</div>
